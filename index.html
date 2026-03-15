@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Soraya Othman</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Portfolio</h1>
+  </header>
+
+  <nav>
+    <button class="tab-button active" data-tab="presentation">À propos</button>
+    <button class="tab-button" data-tab="experience">Expérience professionnelle</button>
+    <button class="tab-button" data-tab="projets">Projets</button>
+    <button class="tab-button" data-tab="veille">Veille technologique</button>
+    <button class="tab-button" data-tab="contact">Contact</button>
+    <button class="tab-button" data-tab="fiche">Fiche de synthèse</button>
+  </nav>
+  <main>
+    <section id="presentation" class="active">
+      <h2>À propos</h2>
+      <div class="about-container">
+        <div class="about-text">
+          <p>Je m'appelle <strong>Soraya Othman</strong> et je suis actuellement étudiante en <strong>BTS SIO</strong>, spécialité <strong>SLAM</strong> (Solutions Logicielles et Applications Métiers). Après avoir obtenu un <strong>bac professionnel ASSP</strong> (Accompagnement, Soins et Services à la Personne), j'ai poursuivi des études de cinéma, puis travaillé comme <strong>vendeuse dans un magasin de jouets</strong>.</p>
+          <p>J’ai toujours été curieuse et attirée par le domaine de l’informatique. Cette curiosité m’a poussée à reprendre mes études afin d’en apprendre davantage et de me former sérieusement au développement web et logiciel. Aujourd’hui, je construis mon avenir dans un secteur qui me passionne réellement.</p>
+        </div>
+        <div class="cv-preview">
+          <a href="CV_2025-05-28_Soraya_Othman.pdf" download>
+            <img src="cvsoraya.png" alt="Miniature de mon CV">
+            <p style="color: #ffcccc; margin-top: 0.5rem;">📄 Télécharger mon CV</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="projets">
+      <h2>Projets</h2>
+
+      <div class="project">
+        <h3>Billetterie</h3>
+        <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
+          <img src="Billeterie.png" alt="Miniature de la billetterie" style="width: 300px; border: 2px solid #800020; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.4);">
+          <div>
+            <p><strong>Technologies :</strong> Java, FXML, JavaFX, Wamp</p>
+            <p>Ce projet est une application de billetterie en cours de développement, conçue pour permettre aux utilisateurs de consulter et gérer des spectacles. La version actuelle inclut un accueil interactif où l'utilisateur peut se connecter à son compte client ou s'inscrire s'il est nouveau. Depuis l'accueil, il est possible de rechercher un spectacle spécifique grâce à une barre de recherche dynamique, et d'afficher les détails complets de chaque spectacle sélectionné.</p>
+            <p>L'application offre également un espace personnel appelé "Mon espace", où l'utilisateur peut consulter, modifier ou supprimer les informations de son compte. Le projet est structuré selon le modèle MVC, avec des vues en FXML, des contrôleurs JavaFX pour gérer les interactions, et des modèles Java pour accéder et manipuler les données stockées dans la base MySQL via Wamp.</p>
+            <p>Cette billetterie constitue la version 1 du projet, et elle pose les bases pour intégrer des fonctionnalités supplémentaires comme l'achat de billets, la gestion avancée des spectacles et une interface plus riche et interactive.</p>
+            <a href="#" target="_blank">Voir sur GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project">
+        <h3>Application Sonistock</h3>
+        <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
+          <img src="soniStock1.jpg" alt="Miniature de l'application Sonistock" style="width: 150px; border: 2px solid #800020; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.4);">
+          <img src="soniStock2.jpg" alt="Miniature de l'application Sonistock" style="width: 150px; border: 2px solid #800020; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.4);">
+          <img src="soniStock3.jpg" alt="Miniature de l'application Sonistock" style="width: 150px; border: 2px solid #800020; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.4);">
+          <div>
+            <p><strong>Technologies :</strong> HTML, CSS, JavaScript, Node.js, XAMPP, phpMyAdmin</p>
+            <p>Application web développée durant mon stage chez Sonis pour gérer le stock de matériel informatique :</p>
+            <ul style="padding-left: 1rem;">
+              <li>Base de données gérée localement avec phpMyAdmin (via XAMPP).</li>
+              <li>Connexion/déconnexion</li>
+              <li>Recherche/filtre</li>
+              <li>Tableau des produits avec le prix, les quantitées, l'emplacement et une case pour sélectionner</li>
+              <li>Tableau des produits sélectionner dans le panier pour valider le choix</li>
+              <li>Interface mobile pour les techniciens : retrait du matériel.</li>
+              <li>Interface admin : ajout, modification, suppression de produits,</li>
+              <li>Gestion des techniciens (ajout, édition, suppression),</li>
+              <li>Modification de l'horaire d’envoi automatique des e-mails de stock faible,</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="project">
+        <h3>Jeu Tetris</h3>
+        <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
+          <img src="tetris.png" alt="Miniature du jeu Tetris" style="width: 300px; border: 2px solid #800020; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.4);">
+          <div>
+            <p><strong>Technologies :</strong> HTML, CSS, JavaScript</p>
+            <p>Un jeu Tetris codé en JavaScript avec gestion des collisions, des lignes et du score. Interface simple et responsive.</p>
+            <a href="#" target="_blank">Voir sur GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project">
+        <h3>Site e-commerce "Fiestita"</h3>
+        <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
+          <img src="fiestita.png" alt="Miniature du site Fête & Co" style="width: 300px; border: 2px solid #800020; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.4);">
+          <img src="fiestita2.png" alt="Miniature du site Fête & Co" style="width: 300px; border: 2px solid #800020; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.4);">
+          <img src="fiestita3.png" alt="Miniature du site Fête & Co" style="width: 300px; border: 2px solid #800020; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.4);">
+          <div>
+            <p><strong>Technologies :</strong> HTML, CSS</p>
+            <p>Un site vitrine de type e-commerce pour une entreprise spécialisée dans l’organisation de fêtes : anniversaires, mariages, événements professionnels, etc.</p>
+            <a href="#" target="_blank">Voir sur GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project">
+      <h3>Site Photographe - Exercice OpenClassrooms</h3>
+      <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
+        <img src="exoOpenclassroom.png" alt="Miniature du site Photographe" style="width: 300px; border: 2px solid #800020; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.4);">
+        <img src="exoOpenclassroom2.png" alt="Miniature du site Photographe" style="width: 300px; border: 2px solid #800020; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.4);">
+        <img src="exoOpenclassroom3.png" alt="Miniature du site Photographe" style="width: 300px; border: 2px solid #800020; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.4);">
+        <div>
+          <p><strong>Technologies :</strong> HTML, CSS</p>
+          <p>Projet réalisé dans le cadre d’un exercice sur la plateforme OpenClassrooms. Il s’agissait de créer le site vitrine d’un photographe professionnel, en respectant une maquette donnée.</p>
+          <a href="#" target="_blank">Voir sur GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    </section>
+
+    <section id="experience">
+      <h2>Expérience professionnelle</h2>
+
+      <div class="experience-item">
+        <div>
+          <h3>Stage - Sonis</h3>
+          <p><strong>Durée :</strong> 7 semaines</p>
+          <p><strong>Rôle :</strong> Support technique niveau 1 et développement d'une application de stock.</p>
+          <p><strong>Missions :</strong></p>
+          <ul>
+            <li>Développement d'une application de gestion de stock avec interface mobile.</li>
+            <li>Réalisation de l'inventaire complet et intégration dans une base de données.</li>
+            <li>Interface techniciens pour : recherche des produits, retrait de matériel.</li>
+            <li>Interface administrateur pour : ajout, modification, suppression de matériel.
+            Paramétrage des horaires d’envoi automatique d’emails (stock faible).
+            Gestion des comptes techniciens : ajout, modification, suppression.</li>
+          </ul>
+        </div>
+        <img src="logoSonis.png" alt="Sonis" class="miniature">
+      </div>
+
+
+      <div class="experience-item">
+        <div>
+          <h3>Vendeuse - King Jouet</h3>
+          <p><strong>Durée :</strong> 4 ans</p>
+          <p><strong>Rôle :</strong> Vendeuse dans un magasin de jouets, où j’ai conseillé les clients sur les produits, géré les stocks et contribué à la mise en valeur des articles pour améliorer l'expérience d'achat.</p>
+        </div>
+        <img src="logoK.png" alt="King Jouet" class="miniature">
+      </div>
+
+      <div class="experience-item">
+        <div>
+          <h3>Vendeuse en produits informatiques et gaming - Achatmania</h3>
+          <p><strong>Événements :</strong> Paris Games Week, Toulouse Game Show, DreamHack</p>
+          <p><strong>Rôle :</strong> Vendeuse de produits informatiques et gaming lors de salons spécialisés dans le secteur. Conseil, démonstration et vente de produits aux visiteurs, en mettant en avant leurs spécificités et avantages.</p>
+        </div>
+        <img src="logoAchatmania.png" alt="Paris Games Week" class="miniature">
+      </div>
+      
+    </section>
+
+    <section id="veille">
+      <h2>Veille technologique</h2>
+  <div class="project">
+    <h3>Outils et tendances du développement web</h3>
+    <p>
+      Afin de rester à jour dans un domaine en constante évolution, je mène une veille technologique régulière. Celle-ci me permet de suivre les nouveautés, les outils récents et les bonnes pratiques du développement web.
+    </p>
+
+    <p><strong>Mes sources principales :</strong></p>
+    <ul style="padding-left: 1rem;">
+      <li>
+        <strong><a href="https://korben.info/categories/developpement/outils-dev/" target="_blank">Korben</a></strong> : un site francophone qui propose des articles sur les outils pour développeurs, les innovations techniques, la cybersécurité et les tendances numériques.
+      </li>
+      <li>
+        <strong><a href="https://www.smashingmagazine.com/" target="_blank">Smashing Magazine</a></strong> :
+        une ressource anglophone de référence dans le développement et le design web.
+      </li>
+      <li>
+        <strong><a href="https://www.blogdumoderateur.com/tech/" target="_blank">Blog du Modérateur - Tech</a></strong> :
+        un site dédié aux actualités tech. Je suis également inscrite à leur newsletter.
+      </li>
+      <li>
+        <strong><a href="https://blog.cloudflare.com/fr-fr/" target="_blank">Blog Cloudflare</a></strong> :
+        un blog orienté cybersécurité, performance web et analyses liées au trafic Internet.
+      </li>
+    </ul> 
+    <p><strong>Dernier article consulté :</strong></p>
+    <img src="veilleTech.png" alt="Paris Games Week" class="miniature">
+    <p>
+      <a href="https://korben.info/kan-alternative-open-source-trello.html" target="_blank">
+        KAN — une alternative open-source à Trello
+      </a>
+      
+    </p>
+  </div>
+  </section>
+
+
+
+
+
+  <section id="contact"> 
+      <h2>Contactez moi</h2>
+
+      <form action="contact.php" method="POST" style="display: flex; flex-direction: column; gap: 1rem; max-width: 600px; margin-top: 1rem;">
+        <input type="text" name="nom" placeholder="Votre nom" required
+              style="padding: 0.8rem; border: none; border-radius: 5px; background: #2a2a2a; color: #fff;">
+          
+        <input type="email" name="email" placeholder="Votre email" required
+              style="padding: 0.8rem; border: none; border-radius: 5px; background: #2a2a2a; color: #fff;">
+          
+        <textarea name="message" rows="6" placeholder="Votre message" required
+                  style="padding: 0.8rem; border: none; border-radius: 5px; background: #2a2a2a; color: #fff;"></textarea>
+          
+        <button type="submit"
+                style="background-color: #800020; color: white; padding: 0.8rem; border: none; border-radius: 5px; cursor: pointer;">
+          Envoyer
+        </button>
+      </form>
+
+      <div style="margin-top: 2rem;">
+        <p>LinkedIn : <a href="https://www.linkedin.com/in/sorayaothman021294" target="_blank" style="color: #ffcccc;">Cliquer ici pour voir mon profil</a></p>
+        <p>GitHub : <a href="https://github.com/So0212" target="_blank" style="color: #ffcccc;">Cliquer ici pour voir mon profil</a></p>
+      </div>
+  </section>
+
+  <section id="fiche">
+  <h2>Fiche de synthèse</h2>
+  <div class="ficheSynt">
+    <embed src="Tableau de synthese.pdf"
+           type="application/pdf"
+           width="100%"
+           height="600px" />
+  </div>
+</section>
+
+ </main>
+
+  <footer>
+    <p>&copy; 2025 Soraya Othman</p>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+</html>
