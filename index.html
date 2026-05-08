@@ -29,8 +29,8 @@
           <p>J’ai toujours été curieuse et attirée par le domaine de l’informatique. Cette curiosité m’a poussée à reprendre mes études afin d’en apprendre davantage et de me former sérieusement au développement web et logiciel. Aujourd’hui, je construis mon avenir dans un secteur qui me passionne réellement.</p>
         </div>
         <div class="cv-preview">
-          <a href="CV_Soraya_Othman2026.pdf" download>
-            <img src="cvsoraya2.png" alt="Miniature de mon CV">
+          <a href="docs/CV_Soraya_Othman2026.pdf" download>
+            <img src="img/cvsoraya2.png" alt="Miniature de mon CV">
             <p style="color: #ffcccc; margin-top: 0.5rem;">📄 Télécharger mon CV</p>
           </a>
         </div>
@@ -41,11 +41,37 @@
       <h2>Projets</h2>
 
       <div class="project">
+        <h3>L'Aventurier</h3>
+        <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
+          <img src="img/aventurier1.png" alt="Miniature du projet L'Aventurier" style="width: 300px; height: 200px; object-fit: cover; border: 2px solid #800020; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.4);">
+          <img src="img/aventurier2.png" alt="Miniature du projet L'Aventurier" style="width: 300px; height: 200px; object-fit: cover; border: 2px solid #800020; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.4);">
+          <img src="img/aventurier5.png" alt="Miniature du projet L'Aventurier" style="width: 300px; height: 200px; object-fit: cover; border: 2px solid #800020; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.4);">
+          <div>
+            <p><strong>Technologies :</strong> Java, JavaFX, MySQL, JDBC, Maven, jBCrypt, Jakarta Mail</p>
+            <p>Application éducative de quiz géographique dans laquelle les joueurs progressent de continent en continent en répondant à des questions sur les capitales, les animaux emblématiques, les drapeaux et la géographie générale.</p>
+            <ul style="padding-left: 1rem;">
+              <li>Inscription avec choix d'avatar et connexion sécurisée (mot de passe hashé avec jBCrypt).</li>
+              <li>Fiches de révision par pays avant chaque quiz.</li>
+              <li>Quiz à choix multiples : 4 types de questions (capitale, animal, drapeau, carte).</li>
+              <li>5 niveaux débloquables progressivement : Europe, Afrique, Amériques, Asie & Océanie, Europe approfondie.</li>
+              <li>Suivi de progression avec barre d'avancement par continent.</li>
+              <li>Interface administrateur avec double authentification par email (code 6 chiffres) et gestion CRUD complète (joueurs, niveaux, questions, pays).</li>
+            </ul>
+            <p>Le projet est structuré selon le pattern MVC avec couche DAO pour l'accès à la base de données MySQL.</p>
+            <div style="display: flex; gap: 0.8rem; flex-wrap: wrap; margin-top: 0.5rem;">
+              <a href="https://github.com/So0212/l-aventurier" target="_blank">Voir sur GitHub</a>
+              <a href="aventurier.html" style="background: #800020; color: #fff; padding: 0.3rem 0.9rem; border-radius: 5px; text-decoration: none; font-size: 0.9rem;">Voir plus →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project">
         <h3>Bibliothèque en ligne</h3>
         <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
-          <img src="projetBibliotheque.png" alt="Miniature du projet Bibliothèque en ligne" style="width: 300px; border: 2px solid #800020; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.4);">
-          <img src="projetbibliotheque2.png" alt="Miniature du projet Bibliothèque en ligne" style="width: 300px; border: 2px solid #800020; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.4);">
-          <img src="projeBibliotheque3.png" alt="Miniature du projet Bibliothèque en ligne" style="width: 300px; border: 2px solid #800020; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.4);">
+          <img src="img/biblio1.png" alt="Miniature du projet Bibliothèque en ligne" style="width: 300px; border: 2px solid #800020; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.4);">
+          <img src="img/biblio4.png" alt="Miniature du projet Bibliothèque en ligne" style="width: 300px; border: 2px solid #800020; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.4);">
+          <img src="img/biblio5.png" alt="Miniature du projet Bibliothèque en ligne" style="width: 300px; border: 2px solid #800020; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.4);">
           <div>
             <p><strong>Technologies :</strong> PHP, Laravel, MySQL, HTML, CSS, JavaScript</p>
             <p>Application web de bibliothèque en ligne permettant aux utilisateurs de louer et gérer des livres. Le projet inclut :</p>
@@ -56,7 +82,10 @@
               <li>Interface admin pour ajouter, modifier et supprimer des livres et utilisateur.</li>
             </ul>
             <p>Le projet est développé avec le framework Laravel pour la gestion des routes, des contrôleurs, des vues Blade et des migrations de base de données MySQL.</p>
-            <a href="https://github.com/So0212/bibliothequeProjet" target="_blank">Voir sur GitHub</a>
+            <div style="display: flex; gap: 0.8rem; flex-wrap: wrap; margin-top: 0.5rem;">
+              <a href="https://github.com/So0212/bibliothequeProjet" target="_blank">Voir sur GitHub</a>
+              <a href="bibliotheque.html" style="background: #800020; color: #fff; padding: 0.3rem 0.9rem; border-radius: 5px; text-decoration: none; font-size: 0.9rem;">Voir plus →</a>
+            </div>
           </div>
         </div>
       </div>
@@ -64,7 +93,7 @@
       <div class="project">
         <h3>Billetterie</h3>
         <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
-          <img src="Billeterie.png" alt="Miniature de la billetterie" style="width: 300px; border: 2px solid #800020; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.4);">
+          <img src="img/Billeterie.png" alt="Miniature de la billetterie" style="width: 300px; border: 2px solid #800020; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.4);">
           <div>
             <p><strong>Technologies :</strong> Java, FXML, JavaFX, Wamp</p>
             <p>Ce projet est une application de billetterie en cours de développement, conçue pour permettre aux utilisateurs de consulter et gérer des spectacles. La version actuelle inclut un accueil interactif où l'utilisateur peut se connecter à son compte client ou s'inscrire s'il est nouveau. Depuis l'accueil, il est possible de rechercher un spectacle spécifique grâce à une barre de recherche dynamique, et d'afficher les détails complets de chaque spectacle sélectionné.</p>
@@ -78,9 +107,9 @@
       <div class="project">
         <h3>Application Sonistock</h3>
         <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
-          <img src="soniStock1.jpg" alt="Miniature de l'application Sonistock" style="width: 150px; border: 2px solid #800020; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.4);">
-          <img src="soniStock2.jpg" alt="Miniature de l'application Sonistock" style="width: 150px; border: 2px solid #800020; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.4);">
-          <img src="soniStock3.jpg" alt="Miniature de l'application Sonistock" style="width: 150px; border: 2px solid #800020; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.4);">
+          <img src="img/soniStock1.jpg" alt="Miniature de l'application Sonistock" style="width: 150px; border: 2px solid #800020; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.4);">
+          <img src="img/soniStock2.jpg" alt="Miniature de l'application Sonistock" style="width: 150px; border: 2px solid #800020; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.4);">
+          <img src="img/soniStock3.jpg" alt="Miniature de l'application Sonistock" style="width: 150px; border: 2px solid #800020; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.4);">
           <div>
             <p><strong>Technologies :</strong> HTML, CSS, JavaScript, Node.js, XAMPP, phpMyAdmin</p>
             <p>Application web développée durant mon stage chez Sonis pour gérer le stock de matériel informatique :</p>
@@ -104,11 +133,10 @@
       <div class="project">
         <h3>Jeu Tetris</h3>
         <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
-          <img src="tetris.png" alt="Miniature du jeu Tetris" style="width: 300px; border: 2px solid #800020; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.4);">
+          <img src="img/tetris.png" alt="Miniature du jeu Tetris" style="width: 300px; border: 2px solid #800020; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.4);">
           <div>
             <p><strong>Technologies :</strong> HTML, CSS, JavaScript</p>
             <p>Un jeu Tetris codé en JavaScript avec gestion des collisions, des lignes et du score. Interface simple et responsive.</p>
-            <a href="#" target="_blank">Voir sur GitHub</a>
           </div>
         </div>
       </div>
@@ -116,7 +144,7 @@
       <div class="project">
         <h3>Location de voitures en ligne</h3>
         <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
-          <img src="location_voiture.png" alt="Miniature du projet Location de voitures" style="width: 300px; border: 2px solid #800020; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.4);">
+          <img src="img/location_voiture.png" alt="Miniature du projet Location de voitures" style="width: 300px; border: 2px solid #800020; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.4);">
           <div>
             <p><strong>Technologies :</strong> PHP, MySQL, HTML, CSS</p>
             <p>Application web e-commerce pour la location de voitures, permettant aux utilisateurs de :</p>
@@ -126,7 +154,6 @@
               <li>Ajouter des voitures dans le panier.</li>
             </ul>
             <p>Le projet utilise PHP et MySQL pour la gestion des utilisateurs, du catalogue et du panier.</p>
-            <a href="#" target="_blank">Voir sur GitHub</a>
           </div>
         </div>
       </div>
@@ -134,13 +161,12 @@
       <div class="project">
         <h3>Site e-commerce "Fiestita"</h3>
         <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
-          <img src="fiestita.png" alt="Miniature du site Fête & Co" style="width: 300px; border: 2px solid #800020; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.4);">
-          <img src="fiestita2.png" alt="Miniature du site Fête & Co" style="width: 300px; border: 2px solid #800020; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.4);">
-          <img src="fiestita3.png" alt="Miniature du site Fête & Co" style="width: 300px; border: 2px solid #800020; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.4);">
+          <img src="img/fiestita.png" alt="Miniature du site Fête & Co" style="width: 300px; border: 2px solid #800020; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.4);">
+          <img src="img/fiestita2.png" alt="Miniature du site Fête & Co" style="width: 300px; border: 2px solid #800020; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.4);">
+          <img src="img/fiestita3.png" alt="Miniature du site Fête & Co" style="width: 300px; border: 2px solid #800020; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.4);">
           <div>
             <p><strong>Technologies :</strong> HTML, CSS</p>
             <p>Un site vitrine de type e-commerce pour une entreprise spécialisée dans l’organisation de fêtes : anniversaires, mariages, événements professionnels, etc.</p>
-            <a href="#" target="_blank">Voir sur GitHub</a>
           </div>
         </div>
       </div>
@@ -148,13 +174,12 @@
       <div class="project">
       <h3>Site Photographe - Exercice OpenClassrooms</h3>
       <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
-        <img src="exoOpenclassroom.png" alt="Miniature du site Photographe" style="width: 300px; border: 2px solid #800020; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.4);">
-        <img src="exoOpenclassroom2.png" alt="Miniature du site Photographe" style="width: 300px; border: 2px solid #800020; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.4);">
-        <img src="exoOpenclassroom3.png" alt="Miniature du site Photographe" style="width: 300px; border: 2px solid #800020; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.4);">
+        <img src="img/exoOpenclassroom.png" alt="Miniature du site Photographe" style="width: 300px; border: 2px solid #800020; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.4);">
+        <img src="img/exoOpenclassroom2.png" alt="Miniature du site Photographe" style="width: 300px; border: 2px solid #800020; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.4);">
+        <img src="img/exoOpenclassroom3.png" alt="Miniature du site Photographe" style="width: 300px; border: 2px solid #800020; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.4);">
         <div>
           <p><strong>Technologies :</strong> HTML, CSS</p>
           <p>Projet réalisé dans le cadre d’un exercice sur la plateforme OpenClassrooms. Il s’agissait de créer le site vitrine d’un photographe professionnel, en respectant une maquette donnée.</p>
-          <a href="#" target="_blank">Voir sur GitHub</a>
         </div>
       </div>
     </div>
@@ -177,7 +202,7 @@
             <li><strong>Nettoyage et vérification de la base de données clients</strong> : correction des mauvaises saisies et suppression des doublons pour rendre la base plus claire et fiable.</li>
           </ul>
         </div>
-        <img src="logoSonis.png" alt="Sonis" class="miniature">
+        <img src="img/logos/logoSonis.png" alt="Sonis" class="miniature">
       </div>
 
       <div class="experience-item">
@@ -195,7 +220,7 @@
             Gestion des comptes techniciens : ajout, modification, suppression.</li>
           </ul>
         </div>
-        <img src="logoSonis.png" alt="Sonis" class="miniature">
+        <img src="img/logos/logoSonis.png" alt="Sonis" class="miniature">
       </div>
 
 
@@ -205,7 +230,7 @@
           <p><strong>Durée :</strong> 4 ans</p>
           <p><strong>Rôle :</strong> Vendeuse dans un magasin de jouets, où j’ai conseillé les clients sur les produits, géré les stocks et contribué à la mise en valeur des articles pour améliorer l'expérience d'achat.</p>
         </div>
-        <img src="logoK.png" alt="King Jouet" class="miniature">
+        <img src="img/logos/logoK.png" alt="King Jouet" class="miniature">
       </div>
 
       <div class="experience-item">
@@ -214,7 +239,7 @@
           <p><strong>Événements :</strong> Paris Games Week, Toulouse Game Show, DreamHack</p>
           <p><strong>Rôle :</strong> Vendeuse de produits informatiques et gaming lors de salons spécialisés dans le secteur. Conseil, démonstration et vente de produits aux visiteurs, en mettant en avant leurs spécificités et avantages.</p>
         </div>
-        <img src="logoAchatmania.png" alt="Paris Games Week" class="miniature">
+        <img src="img/logos/logoAchatmania.png" alt="Paris Games Week" class="miniature">
       </div>
       
     </section>
@@ -222,53 +247,85 @@
     <section id="veille">
       <h2>Veille technologique</h2>
 
+      <!-- Méthodes de veille -->
       <div class="project">
+        <h3>🔎 Mes méthodes de veille</h3>
+        <p>
+          Pour rester informée des évolutions technologiques, j'ai mis en place plusieurs moyens de veille complémentaires que je consulte régulièrement :
+        </p>
+        <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1rem;">
 
-        <h3>
-          🤖 L'IA au service de l'automatisation des bases de données
-        </h3>
+          <div style="background: #2a2a2a; border-radius: 8px; padding: 1rem; flex: 1 1 200px;">
+            <p style="color: #ff9999; font-weight: 600; margin: 0 0 0.4rem;">📡 Flux RSS — Feedly</p>
+            <p style="margin: 0; font-size: 0.9rem; color: #ccc;">
+              J'utilise <strong>Feedly</strong> comme agrégateur de flux RSS pour centraliser en un seul endroit les publications de plusieurs sources tech. Cela me permet de consulter les nouveautés sans visiter chaque site individuellement.
+            </p>
+          </div>
+
+          <div style="background: #2a2a2a; border-radius: 8px; padding: 1rem; flex: 1 1 200px;">
+            <p style="color: #ff9999; font-weight: 600; margin: 0 0 0.4rem;">📧 Newsletters</p>
+            <p style="margin: 0; font-size: 0.9rem; color: #ccc;">
+              Je suis abonnée à plusieurs newsletters : <strong>Korben</strong> pour les outils et actualités développeurs, <strong>BDM (Blog du Modérateur)</strong> pour les tendances numériques et web, et <strong>Oracle</strong> pour les nouveautés autour des bases de données et du cloud.
+            </p>
+          </div>
+
+          <div style="background: #2a2a2a; border-radius: 8px; padding: 1rem; flex: 1 1 200px;">
+            <p style="color: #ff9999; font-weight: 600; margin: 0 0 0.4rem;">💼 LinkedIn</p>
+            <p style="margin: 0; font-size: 0.9rem; color: #ccc;">
+              Je consulte régulièrement mon fil d'actualité <strong>LinkedIn</strong> où je suis des professionnels du développement et des entreprises tech. C'est une source utile pour découvrir des retours d'expérience, des annonces de nouvelles technologies et des articles de fond.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Thème de veille -->
+      <div class="project" style="margin-top: 1.5rem;">
+        <h3>🤖 Thème : L'IA au service de l'automatisation des bases de données</h3>
 
         <p>
-          L'intelligence artificielle révolutionne la gestion des bases de données en automatisant des tâches jusqu'ici entièrement manuelles. En tant qu'étudiante en BTS SIO SLAM, et ayant travaillé directement avec des bases de données MySQL dans mes projets, ce sujet m'a naturellement attirée.
+          L'intelligence artificielle transforme en profondeur la façon dont les développeurs et les administrateurs interagissent avec les bases de données. En tant qu'étudiante en BTS SIO SLAM, j'utilise MySQL dans la quasi-totalité de mes projets — et lors de mon stage chez Sonis, j'ai effectué manuellement des tâches longues et répétitives (nettoyage de doublons, correction de saisies). C'est ce constat concret qui m'a amenée à m'intéresser à l'automatisation de ces tâches par l'IA.
         </p>
 
-        <div>
+        <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: 1rem;">
 
-          <div >
-            <strong>✍️ Text-to-SQL : interroger une base en langage naturel</strong>
-            <p >
-              Des outils comme <strong>AI2SQL</strong> ou <strong>Chat2DB</strong> permettent de poser une question en français — <em>« Quels produits sont en rupture de stock ? »</em> — et l'IA génère automatiquement la requête SQL correspondante. Plus besoin de connaître la syntaxe par cœur pour interroger une base.
+          <div style="border-left: 3px solid #800020; padding-left: 1rem;">
+            <strong style="color: #ffcccc;">✍️ Text-to-SQL : interroger une base en langage naturel</strong>
+            <p style="color: #ccc; margin: 0.4rem 0 0;">
+              Des outils comme <strong>AI2SQL</strong> ou <strong>Chat2DB</strong> permettent de formuler une question en langage naturel — <em>« Quels produits sont en rupture de stock ? »</em> — et l'IA génère automatiquement la requête SQL correspondante. Cette technologie repose sur des LLMs (grands modèles de langage) qui ont été entraînés à comprendre la structure des bases de données et la syntaxe SQL. Elle réduit la barrière d'entrée pour les non-développeurs tout en accélérant le travail des développeurs eux-mêmes.
             </p>
           </div>
 
-          <div>
-            <strong>🧹 Nettoyage et maintenance automatisés</strong>
-            <p>
-              L'IA peut détecter et corriger automatiquement les doublons, les valeurs aberrantes et les champs mal renseignés — une tâche que j'ai effectuée à la main lors de mon stage. Elle peut aussi anticiper les ralentissements ou saturations avant qu'ils ne surviennent.
+          <div style="border-left: 3px solid #800020; padding-left: 1rem;">
+            <strong style="color: #ffcccc;">🧹 Nettoyage et maintenance automatisés</strong>
+            <p style="color: #ccc; margin: 0.4rem 0 0;">
+              Des solutions basées sur l'IA peuvent analyser une base de données et détecter automatiquement les doublons, les valeurs aberrantes, les champs vides ou mal renseignés — exactement le travail que j'ai réalisé manuellement sur la base clients de Sonis. Ces outils proposent ensuite des corrections ou des regroupements, réduisant un travail de plusieurs jours à quelques minutes. Certains systèmes peuvent aussi surveiller en continu la qualité des données et alerter en cas d'anomalie.
             </p>
           </div>
 
-          <div>
-            <strong>⚡ Optimisation des performances</strong>
-            <p>
-              L'IA analyse les requêtes existantes et suggère des améliorations : ajout d'index, réécriture de jointures inefficaces, mise en cache intelligente. La base reste rapide même quand le volume de données grandit.
+          <div style="border-left: 3px solid #800020; padding-left: 1rem;">
+            <strong style="color: #ffcccc;">⚡ Optimisation automatique des performances</strong>
+            <p style="color: #ccc; margin: 0.4rem 0 0;">
+              L'IA analyse les requêtes SQL existantes, identifie celles qui sont lentes ou coûteuses, et suggère des améliorations concrètes : ajout d'index manquants, réécriture de jointures inefficaces, mise en cache intelligente. Des outils comme <strong>EverSQL</strong> ou les fonctionnalités intégrées dans <strong>Oracle Autonomous Database</strong> appliquent ces optimisations de façon automatique, sans intervention du développeur.
             </p>
           </div>
 
         </div>
 
-        <div>
-          <h4 >⚠️ Limites</h4>
-          <p>
-            L'IA ne remplace pas la maîtrise du SQL : une base mal structurée produira des résultats inexacts. La sécurité reste également un enjeu majeur — laisser une IA agir sur une base de données en production exige des contrôles d'accès stricts et une supervision humaine.
+        <div style="background: #2a2a2a; border-radius: 8px; padding: 1rem; margin-top: 1.2rem;">
+          <p style="color: #ff9999; font-weight: 600; margin: 0 0 0.4rem;">⚠️ Limites et points de vigilance</p>
+          <p style="color: #ccc; margin: 0; font-size: 0.92rem;">
+            L'IA ne remplace pas la maîtrise du SQL ni la compréhension du modèle de données : une requête générée automatiquement peut être syntaxiquement correcte mais sémantiquement fausse si la base est mal structurée. La sécurité est également un enjeu critique — laisser une IA modifier une base de données en production exige des droits d'accès strictement contrôlés et une supervision humaine. Enfin, ces outils restent dépendants de la qualité de la documentation et du schéma fourni.
           </p>
         </div>
 
-        <h4>📚 Sources</h4>
-        <ul style="padding-left: 1rem; font-size: 0.95rem;">
-          <li style="margin-bottom: 0.3rem;"><a href="https://cloud.google.com/blog/fr/products/bases-de-donnees/comment-obtenir-du-code-sql-de-qualite-avec-lia-decryptage-des-techniques-de-text-to-sql" target="_blank" style="color: #ffcccc;">Blog Google Cloud</a> — Text-to-SQL avec les LLMs (déc. 2025)</li>
-          <li style="margin-bottom: 0.3rem;"><a href="https://zencoder.ai/fr/blog/best-ai-for-sql" target="_blank" style="color: #ffcccc;">Zencoder</a> — Meilleurs outils IA pour SQL en 2025</li>
-          <li><a href="https://korben.info" target="_blank" style="color: #ffcccc;">Korben</a> — Veille tech & outils développeurs (newsletter)</li>
+        <h4 style="margin-top: 1.5rem;">📚 Sources</h4>
+        <ul style="padding-left: 1rem; font-size: 0.92rem; color: #ccc;">
+          <li style="margin-bottom: 0.4rem;"><a href="https://cloud.google.com/blog/fr/products/bases-de-donnees/comment-obtenir-du-code-sql-de-qualite-avec-lia-decryptage-des-techniques-de-text-to-sql" target="_blank" style="color: #ffcccc;">Blog Google Cloud</a> — Text-to-SQL avec les LLMs (déc. 2025) — <em>via Feedly</em></li>
+          <li style="margin-bottom: 0.4rem;"><a href="https://zencoder.ai/fr/blog/best-ai-for-sql" target="_blank" style="color: #ffcccc;">Zencoder</a> — Meilleurs outils IA pour SQL en 2025 — <em>via Feedly</em></li>
+          <li style="margin-bottom: 0.4rem;"><a href="https://korben.info" target="_blank" style="color: #ffcccc;">Korben</a> — Veille tech & outils développeurs — <em>newsletter</em></li>
+          <li style="margin-bottom: 0.4rem;"><a href="https://www.blogdumoderateur.com" target="_blank" style="color: #ffcccc;">Blog du Modérateur (BDM)</a> — Tendances numériques et IA — <em>newsletter</em></li>
+          <li><a href="https://www.oracle.com/fr/database/what-is-autonomous-database/" target="_blank" style="color: #ffcccc;">Oracle</a> — Oracle Autonomous Database & IA — <em>newsletter + LinkedIn</em></li>
         </ul>
 
       </div>
@@ -306,7 +363,7 @@
   <section id="fiche">
   <h2>Fiche de synthèse</h2>
   <div class="ficheSynt">
-    <embed src="tabsynthese.pdf"
+    <embed src="docs/tabsynthese.pdf"
            type="application/pdf"
            width="100%"
            height="600px" />

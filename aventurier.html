@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>L'Aventurier - Soraya Othman</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  <style>
+    .detail-page {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1.5rem;
+      color: #ffcccc;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+    .back-link:hover { text-decoration: underline; }
+
+    .detail-page h2 {
+      border-left: 4px solid #800020;
+      padding-left: 0.5rem;
+      color: #ffcccc;
+      margin-bottom: 0.3rem;
+    }
+
+    .detail-page h3 {
+      color: #ff9999;
+      margin-top: 2rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 1px solid #333;
+      padding-bottom: 0.3rem;
+    }
+
+    .meta-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin: 1rem 0 1.5rem;
+    }
+
+    .meta-item {
+      background: #1e1e1e;
+      border: 1px solid #333;
+      border-radius: 6px;
+      padding: 0.4rem 0.9rem;
+      font-size: 0.88rem;
+      color: #ccc;
+    }
+    .meta-item strong { color: #ffcccc; }
+
+    .tech-badge {
+      display: inline-block;
+      background: #800020;
+      color: #fff;
+      padding: 0.2rem 0.7rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      margin: 0.2rem;
+    }
+
+    .card {
+      background: #1e1e1e;
+      border-left: 4px solid #800020;
+      border-radius: 8px;
+      padding: 1.2rem 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .card h3 { margin-top: 0; }
+
+    .competences {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+    .competence-tag {
+      background: #2a2a2a;
+      border: 1px solid #800020;
+      border-radius: 5px;
+      padding: 0.3rem 0.8rem;
+      font-size: 0.85rem;
+      color: #ffcccc;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 0.8rem;
+      font-size: 0.88rem;
+    }
+    th {
+      background: #800020;
+      color: #fff;
+      padding: 0.5rem 0.8rem;
+      text-align: left;
+    }
+    td {
+      padding: 0.45rem 0.8rem;
+      border-bottom: 1px solid #2a2a2a;
+      color: #ccc;
+      vertical-align: top;
+    }
+    tr:nth-child(even) td { background: #1a1a1a; }
+
+    .constraint-list {
+      list-style: none;
+      padding: 0;
+      margin: 0.5rem 0 0;
+    }
+    .constraint-list li {
+      padding: 0.4rem 0;
+      border-bottom: 1px solid #2a2a2a;
+      font-size: 0.92rem;
+      color: #ccc;
+    }
+    .constraint-list li:last-child { border-bottom: none; }
+    .constraint-list li::before {
+      content: "⚙️ ";
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .gallery figure {
+      margin: 0;
+      text-align: center;
+    }
+    .gallery img {
+      width: 280px;
+      height: 185px;
+      object-fit: cover;
+      border: 2px solid #800020;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+      cursor: pointer;
+      transition: transform 0.2s;
+      display: block;
+    }
+    .gallery img:hover { transform: scale(1.03); }
+    .gallery figcaption {
+      font-size: 0.78rem;
+      color: #888;
+      margin-top: 0.3rem;
+    }
+
+    .demo-placeholder {
+      background: #2a2a2a;
+      border: 2px dashed #800020;
+      border-radius: 8px;
+      padding: 2.5rem;
+      text-align: center;
+      color: #888;
+      margin-top: 0.8rem;
+    }
+
+    .project-links {
+      display: flex;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+      margin-top: 1.5rem;
+      padding-bottom: 2rem;
+    }
+    .btn {
+      display: inline-block;
+      background: #800020;
+      color: #fff;
+      padding: 0.6rem 1.2rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: background 0.2s;
+    }
+    .btn:hover { background: #a00028; }
+
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.88);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+    }
+    .lightbox.open { display: flex; }
+    .lightbox img {
+      max-width: 90vw;
+      max-height: 85vh;
+      border-radius: 8px;
+      box-shadow: 0 0 30px rgba(0,0,0,0.8);
+    }
+    .lightbox-close {
+      position: fixed;
+      top: 1.5rem;
+      right: 2rem;
+      font-size: 2.5rem;
+      color: #fff;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    code {
+      background: #2a2a2a;
+      padding: 0.1rem 0.4rem;
+      border-radius: 3px;
+      font-size: 0.85rem;
+      color: #ffcccc;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Portfolio</h1>
+  </header>
+
+  <div class="detail-page">
+    <a href="index.html" class="back-link">← Retour au portfolio</a>
+
+    <h2>L'Aventurier</h2>
+    <p style="color:#ccc; font-style:italic;">Application éducative de quiz géographique pour enfants — Client lourd Java/JavaFX</p>
+
+    <div class="meta-grid">
+      <div class="meta-item"><strong>Contexte :</strong> Projet scolaire — BTS SIO SLAM</div>
+      <div class="meta-item"><strong>Établissement :</strong> H3 Hitema, Paris 15e</div>
+      <div class="meta-item"><strong>Période :</strong> Oct. 2025 → Jan. 2026</div>
+      <div class="meta-item"><strong>Modalité :</strong> Réalisé seule</div>
+      <div class="meta-item"><strong>Type d'application :</strong> Client lourd (desktop)</div>
+    </div>
+
+    <!-- Compétences BTS -->
+    <div class="card">
+      <h3 style="margin-top:0;">Compétences travaillées (E6)</h3>
+      <div class="competences">
+        <span class="competence-tag">Concevoir et développer une solution applicative</span>
+        <span class="competence-tag">Assurer la maintenance corrective ou évolutive</span>
+        <span class="competence-tag">Gérer les données</span>
+      </div>
+    </div>
+
+    <!-- Technologies -->
+    <h3>Technologies utilisées</h3>
+    <div>
+      <span class="tech-badge">Java 21</span>
+      <span class="tech-badge">JavaFX 21</span>
+      <span class="tech-badge">MySQL 8.0</span>
+      <span class="tech-badge">JDBC</span>
+      <span class="tech-badge">Apache Maven</span>
+      <span class="tech-badge">jBCrypt 0.4</span>
+      <span class="tech-badge">Jakarta Mail 2.0.1</span>
+      <span class="tech-badge">GitHub</span>
+      <span class="tech-badge">Visual Studio Code</span>
+    </div>
+
+    <!-- Contexte -->
+    <h3>Contexte et objectifs</h3>
+    <p>
+      Dans le cadre du BTS SIO SLAM, j'ai développé seule une application client lourd éducative destinée à des enfants
+      souhaitant apprendre la géographie mondiale de façon ludique et progressive.
+      L'application permet d'apprendre capitales, animaux emblématiques et drapeaux du monde via des quiz interactifs
+      par continents, avec un système de progression par score, des fiches de révision illustrées et un back-office
+      sécurisé par double authentification.
+    </p>
+    <p><strong>Ressources fournies :</strong> expression des besoins et schéma de base de données.</p>
+
+    <!-- Fonctionnalités -->
+    <h3>Fonctionnalités développées</h3>
+    <div class="card" style="margin-top:0.5rem;">
+      <p style="margin-top:0; color:#ff9999; font-weight:600;">Espace joueur</p>
+      <ul style="margin:0; padding-left:1.2rem; color:#ccc;">
+        <li>Inscription avec validation : identifiant unique, mot de passe minimum 6 caractères, date de naissance, choix d'un avatar parmi 6 disponibles.</li>
+        <li>Authentification par identifiant et mot de passe hashé (jBCrypt).</li>
+        <li>Fiches de révision paginées par pays : nom, capitale, animal emblématique, drapeau, description.</li>
+        <li>Quiz à choix multiples — 4 types de questions : <em>capitale, animal, drapeau, carte</em>.</li>
+        <li>5 niveaux débloquables séquentiellement : <strong>Europe → Afrique → Amériques → Asie & Océanie → Europe approfondi</strong>.</li>
+        <li>Déblocage conditionné par un score minimum (<code>nb_questions_requis</code>).</li>
+        <li>Profil joueur : modification du pseudo, de la date de naissance, de l'avatar ; barre de progression par niveau.</li>
+      </ul>
+    </div>
+    <div class="card" style="margin-top:0.8rem;">
+      <p style="margin-top:0; color:#ff9999; font-weight:600;">Espace administrateur</p>
+      <ul style="margin:0; padding-left:1.2rem; color:#ccc;">
+        <li>Double authentification par e-mail : code à 6 chiffres valable 5 minutes (Jakarta Mail / SMTP Gmail).</li>
+        <li>Gestion CRUD complète : joueurs, niveaux, questions, pays.</li>
+        <li>Réinitialisation de la progression d'un joueur.</li>
+      </ul>
+    </div>
+
+    <!-- Base de données -->
+    <h3>Modélisation de la base de données</h3>
+    <table>
+      <thead>
+        <tr><th>Table</th><th>Attributs principaux</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>utilisateur</code></td><td>idUtilisateur, identifiant, mot_de_passe (hashé), role, date_creation</td></tr>
+        <tr><td><code>joueur</code></td><td>#idUtilisateur, prenom, avatar, date_naissance, derniere_connexion</td></tr>
+        <tr><td><code>admin</code></td><td>#idUtilisateur, nom_complet, email, derniere_connexion</td></tr>
+        <tr><td><code>niveau</code></td><td>idNiveau, nom_continent, ordre, nb_questions_requis</td></tr>
+        <tr><td><code>pays</code></td><td>idPays, nom_pays, capitale, animal, description, drapeau_img, #idNiveau</td></tr>
+        <tr><td><code>question</code></td><td>idQuestion, enonce, type_question, bonne_reponse, choix_1/2/3, #idNiveau</td></tr>
+        <tr><td><code>progression</code></td><td>idProgression, #idJoueur, #idNiveau, score, est_debloque</td></tr>
+      </tbody>
+    </table>
+
+    <!-- Contraintes -->
+    <h3>Contraintes techniques</h3>
+    <ul class="constraint-list">
+      <li>Un joueur ne peut accéder au niveau suivant que s'il obtient le score minimum requis.</li>
+      <li>Le niveau 1 (Europe) est automatiquement débloqué à la création du compte joueur.</li>
+      <li>Un niveau débloqué ne peut pas être re-verrouillé, même en cas d'échec ultérieur.</li>
+      <li>Le mot de passe est stocké hashé en base (jBCrypt) — jamais en clair.</li>
+      <li>Le code de double authentification administrateur expire après 5 minutes.</li>
+    </ul>
+
+    <!-- Architecture -->
+    <h3>Architecture logicielle</h3>
+    <p>
+      L'application est structurée selon le pattern <strong>MVC</strong> (Model – View – Controller) avec une couche
+      <strong>DAO</strong> (Data Access Object) pour isoler les accès à la base de données MySQL via <strong>JDBC</strong>.
+      Les vues sont construites en <strong>JavaFX / FXML</strong> et les dépendances sont gérées avec <strong>Apache Maven</strong>.
+    </p>
+
+    <!-- Bilan -->
+    <div class="card">
+      <h3 style="margin-top:0;">Bilan</h3>
+      <p style="color:#ccc; margin:0;">
+        Cette réalisation m'a permis de mettre en pratique la conception d'une architecture MVC en Java/JavaFX avec
+        le pattern DAO, la gestion d'une base de données relationnelle MySQL via JDBC, ainsi que l'implémentation
+        d'une logique métier complète (progression, authentification sécurisée, gestion des rôles).
+        J'ai également assuré la <strong>maintenance corrective</strong> en identifiant et corrigeant plusieurs bugs
+        liés au système de déblocage des niveaux et à la gestion de la progression.
+      </p>
+    </div>
+
+    <!-- Captures d'écran -->
+    <h3>Captures d'écran</h3>
+    <div class="gallery" id="gallery">
+      <figure>
+        <img src="img/aventurier1.png" alt="Écran d'accueil">
+        <figcaption>Écran d'accueil</figcaption>
+      </figure>
+      <figure>
+        <img src="img/aventurier2.png" alt="Sélection du continent">
+        <figcaption>Sélection du continent</figcaption>
+      </figure>
+      <figure>
+        <img src="img/aventurier3.png" alt="Fiche de révision">
+        <figcaption>Fiche de révision</figcaption>
+      </figure>
+      <figure>
+        <img src="img/aventurier4.png" alt="Quiz en cours">
+        <figcaption>Quiz en cours</figcaption>
+      </figure>
+      <figure>
+        <img src="img/aventurier5.png" alt="Résultats">
+        <figcaption>Résultats</figcaption>
+      </figure>
+      <figure>
+        <img src="img/aventurier6.png" alt="Interface administrateur">
+        <figcaption>Interface administrateur</figcaption>
+      </figure>
+      <figure>
+        <img src="img/aventurier7.png" alt="Progression joueur">
+        <figcaption>Progression joueur</figcaption>
+      </figure>
+    </div>
+
+    <!-- Démo -->
+    <div class="card" style="margin-top:2rem;">
+      <h3 style="margin-top:0;">Démo</h3>
+      <video controls width="100%" style="border-radius:8px; margin-top:0.8rem;">
+        <source src="videos/demo_quiz.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="project-links">
+      <a href="https://github.com/So0212/l-aventurier" target="_blank" class="btn">Voir sur GitHub</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Soraya Othman</p>
+  </footer>
+
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox-close" id="lightbox-close">&times;</span>
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <script>
+    const gallery = document.getElementById('gallery');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxClose = document.getElementById('lightbox-close');
+
+    gallery.querySelectorAll('img').forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightbox.classList.add('open');
+      });
+    });
+
+    lightboxClose.addEventListener('click', () => lightbox.classList.remove('open'));
+    lightbox.addEventListener('click', e => {
+      if (e.target === lightbox) lightbox.classList.remove('open');
+    });
+  </script>
+</body>
+</html>
